@@ -12,6 +12,7 @@
 		05951EBE229D1AFE00984349 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05951EBC229D1AFE00984349 /* Main.storyboard */; };
 		05951EC0229D1AFF00984349 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05951EBF229D1AFF00984349 /* Assets.xcassets */; };
 		05951EC3229D1AFF00984349 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05951EC1229D1AFF00984349 /* LaunchScreen.storyboard */; };
+		E9F533B7C8E80EF15E351189 /* Pods_RealmDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6175CB625AA9FF1A1E25B392 /* Pods_RealmDog.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		05951EBF229D1AFF00984349 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05951EC2229D1AFF00984349 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05951EC4229D1AFF00984349 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C4FFA1F892FF8E1D5999300 /* Pods-RealmDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmDog.debug.xcconfig"; path = "Target Support Files/Pods-RealmDog/Pods-RealmDog.debug.xcconfig"; sourceTree = "<group>"; };
+		6175CB625AA9FF1A1E25B392 /* Pods_RealmDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC33986EA85E97A191CAE0E4 /* Pods-RealmDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmDog.release.xcconfig"; path = "Target Support Files/Pods-RealmDog/Pods-RealmDog.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9F533B7C8E80EF15E351189 /* Pods_RealmDog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				05951EB7229D1AFE00984349 /* RealmDog */,
 				05951EB6229D1AFE00984349 /* Products */,
+				9266A6A35585890DDA5D225D /* Pods */,
+				8DDA9883614DFE9C94E2ADF3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,24 @@
 			path = RealmDog;
 			sourceTree = "<group>";
 		};
+		8DDA9883614DFE9C94E2ADF3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6175CB625AA9FF1A1E25B392 /* Pods_RealmDog.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9266A6A35585890DDA5D225D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C4FFA1F892FF8E1D5999300 /* Pods-RealmDog.debug.xcconfig */,
+				BC33986EA85E97A191CAE0E4 /* Pods-RealmDog.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05951EC7229D1AFF00984349 /* Build configuration list for PBXNativeTarget "RealmDog" */;
 			buildPhases = (
+				9C34EEDC2C7612EFE9B844D4 /* [CP] Check Pods Manifest.lock */,
 				05951EB1229D1AFE00984349 /* Sources */,
 				05951EB2229D1AFE00984349 /* Frameworks */,
 				05951EB3229D1AFE00984349 /* Resources */,
+				FDAED1D689544BDAC1E4CDE6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9C34EEDC2C7612EFE9B844D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RealmDog-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDAED1D689544BDAC1E4CDE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RealmDog/Pods-RealmDog-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RealmDog/Pods-RealmDog-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RealmDog/Pods-RealmDog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		05951EB1229D1AFE00984349 /* Sources */ = {
@@ -280,6 +349,7 @@
 		};
 		05951EC8229D1AFF00984349 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C4FFA1F892FF8E1D5999300 /* Pods-RealmDog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +368,7 @@
 		};
 		05951EC9229D1AFF00984349 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC33986EA85E97A191CAE0E4 /* Pods-RealmDog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
